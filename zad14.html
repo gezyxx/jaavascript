@@ -1,0 +1,30 @@
+<html> 
+<head> 
+<title>
+    Zadanko 14 na ocenkę celującą
+</title>
+</head>
+<body style="color:blue;font-size:70px;background-color:grey;">
+ <script language="JavaScript">
+
+var No=prompt("podaj N0 = ","");
+var t=prompt("podaj t = ","");
+var T=prompt("podaj T = ","");
+var y;
+var N;
+
+
+No=parseFloat(No);
+t=parseFloat(t);
+T=parseFloat(T);
+y=Math.log(2)/T;
+N=No*Math.pow(Math.E,-(y*t)); 
+
+<!-- ilośc atomów pierwiastka promieniotwórczego -->
+
+document.write("N0 = " + No.toFixed(2) + "[sztuk] <br> t = "+t.toFixed(2) + "[lat] <br> T1/2 = " + T.toFixed(2) + "[lat] <br> Lambda=" + y.toFixed(7) + "[1/rok] <br> N= " + N.toFixed(2) + "[sztuk)");
+ </script>
+</body> 
+</html>
+
+<!-- Oliwier Pomykacz -->
