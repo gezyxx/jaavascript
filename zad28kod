@@ -1,0 +1,45 @@
+<textarea cols=40 rows=60>
+<html>
+<head>
+<script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+
+function router(cena_b,zawartosc_b,zakup_b)
+{
+this.cena=cena_b;
+this.zawartosc=zawartosc_b;
+this.zakup=zakup_b;
+}
+router.prototype.wypisz = function () 
+{
+alert(this.cena + ' ' + this.zawartosc+ ' ' + this.zakup);
+};
+var router1 = new router("89.99zl", "za Router1", " odebrany 9 grudnia przez ");
+var router2 = new router('99.99zl', 'za Router2', ' odebrany 5 lutego przez ');
+var router3 = new router('59.99zl', 'za Router3', ' odebrany 8 maja przez ');
+router1.wypisz();
+router2.wypisz();
+router3.wypisz();
+router.prototype.router_pokaz_pomykacz=function() {alert('Odbiorca: ' + this.odbiorca)}
+router1.odbiorca='Rafała Maszka.';
+router2.odbiorca='Wolnego Pieska.';
+router3.odbiorca='Starą Babke.';
+router1.router_pokaz_pomykacz();
+router2.router_pokaz_pomykacz();
+router3.router_pokaz_pomykacz();
+document.write("dostęp do właściwości"+"<br>");
+document.write("Router pierwszy"+" "+router1.cena+" "+router1.zawartosc+" "+router1.zakup+" "+router1.odbiorca+"<br>");
+document.write("Router Drugi"+" "+router2.cena+" "+router2.zawartosc+" "+router2.zakup+" "+router2.odbiorca+"<br>");
+document.write("router trzeci"+" "+router3.cena+" "+router3.zawartosc+" "+router3.zakup+" "+router3.odbiorca+"<br>");
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
+</textarea>
