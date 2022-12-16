@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title> Przykład użycia pętli </title>
+<script language="JavaScript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+
+ var i_pom=prompt("Podaj imię =","");
+var n_pom=prompt("Podaj nazwisko =","");
+var d = (i_pom.length%4)+5;
+var e = (n_pom.length%6)+20;
+var c_pom = "*";
+
+for ( var i=1; i<=d; i++)
+{
+document.write("*");
+}
+document.write("<br>");
+
+for ( var i=1; i<=(d-2); i++)
+{
+c_pom=c_pom+"&nbsp&nbsp";
+}
+
+for ( var i=1; i<=e; i++)
+{
+document.write(c_pom+"*<br>");
+}
+
+for ( var i=1; i<=d; i++)
+{
+document.write("*");
+}
+</script>
+</head>
+<body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

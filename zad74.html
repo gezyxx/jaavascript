@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title> Przykład użycia pętli </title>
+<script language="JavaScript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+var l1_t_pom=prompt("Podaj liczbę 1 =","");
+var a=parseFloat(l1_t_pom);
+
+var l2_t_pom=prompt("Podaj liczbę 2 =","");
+var b=parseFloat(l2_t_pom);
+
+var po=prompt("Podaj początkową wartość","");
+var pocz_pom=parseFloat(po);
+var tekst_pom=prompt("Podaj tekst","");
+var i = pocz_pom;
+
+if ((a>60) || (a<20) || (b>60) || (b<60)){
+document.write("Nie ma tego w zbiorze.");
+}
+else if (a>b)
+{
+for ( var j=1; j<=pocz_pom; j++)
+{
+if (i>0)
+{
+document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_pom+"<br></p>");
+i = i - 5;
+}
+}
+}
+
+else if (b>a)
+{
+for ( var j=1; j<=pocz_pom; j++)
+{
+if (i<0)
+{
+document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_pom+"<br></p>");
+i = i + 5;
+}
+}
+}
+</script>
+</head>
+<body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
